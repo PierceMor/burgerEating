@@ -7,26 +7,23 @@ $(function(){
       $.ajax("/api/burger/" + id, {
           type: "PUT",
           data: id
-        } ).then(
+        }).then(
           function() {
-            console.log("changed devour state");
             location.reload();
-            console.log(this);
 
           }
         );
   });///change-devoured
 
-  $(".create-burger").on("submit",function (event){
+  $(".create-burger").on("click",function (event){
     event.preventDefault();
 
    var name = $("input#ca").val().trim();
-   var devoured = "0";
+   var devoured = 0;
    var newBurger = {
-     name,
-        devoured
+     name, 
+     devoured
    };
-
     // send the fucking post request
     $.ajax("/api/burger", {
         type: "POST",

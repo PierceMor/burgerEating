@@ -7,7 +7,7 @@ var burger = {
         });
     },
     post: function(value, cb){
-        orm.post('burger', 'name',  value, function(res){
+        orm.post('burger',  value, function(res){
             cb(res);
         });
     },

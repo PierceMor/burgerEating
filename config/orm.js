@@ -45,12 +45,13 @@ var orm = {
         });
     }, //selectall
 
-    post: function(table, columnInput, value, cb) {
-        var queryString = "INSERT INTO " + table + " (" + columnInput + ") " +  " VALUES " + "('" + value + "');";
+    post: function(table, value, cb) {
+        
+        var queryString = `INSERT INTO ${table} (name, devoured) VALUES (?, ?)`;
     
         console.log(queryString);
     
-        connection.query(queryString, value, function(err, result) {
+        connection.query(queryString, [value.name, value.devoured], function(err, result) {
           if (err) {
             throw err;
             console.log(err);
