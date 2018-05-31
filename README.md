@@ -10,8 +10,12 @@ As part of this project, I created a full-stack site that utilizes express, hand
 ## Main Page
 ![image](https://user-images.githubusercontent.com/33271519/40813001-4e1f2700-64fe-11e8-8039-b523edbc1c14.png)
 
-## Prerequisites:
-node.js
+## Languages:
+node.js 
+MySQL
+ExpressJS
+HandlebarsJS
+
 
 ## NPM Packages Used:
 express
