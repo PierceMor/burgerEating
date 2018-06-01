@@ -78,15 +78,15 @@ var orm = {
     }, // update  
 
     deleting: function(table, selected, cb) {
-        var queryString = "DELETE FROM " + table + " WHERE " + selected + ";";
-
+        var queryString = `DELETE FROM ${table} WHERE ${selected};`;
+        console.log(table);
 
         connection.query(queryString, function(err, result){
             if (err){ 
                 throw err;
             }
             if (cb) {
-                cb(result)
+                cb(result);
             }
         });
     } //delete

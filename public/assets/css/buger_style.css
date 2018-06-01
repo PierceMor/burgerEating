@@ -1,9 +1,9 @@
 body {
-    font-family: 'Fredoka One', cursive;
+    font: 1.2em, bold, "Fira Sans", sans-serif;
     background: lightblue;
     text-align: center;
 }
-header {
+.jumbotron {
     font-size: 250%;
     background: yellowgreen;
 }

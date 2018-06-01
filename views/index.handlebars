@@ -1,35 +1,56 @@
 {{!-- This will be where we add our burgers  --}}
-<h1>Eat Burgers</h1>
+<div class="jumbotron">
+  <h1>Eat Burgers</h1>
+</div>
 
 
- <h2> Burgers to EAT! get working skinny</h2>
+<div class="row">
 
- <ul>
-  {{#each burger}}
-    {{#unless devoured}}
-      <li>
-        {{name}}
-        <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}" >Eat da Burgar</button>
-      </li>
-    {{/unless}}
-  {{/each}}
- </ul>
+  <div class="col-1">
+    {{!-- separator --}}
+  </div>
 
- <h2>Burgers EATEN, you fatty</h2>
+  <div class="col-4">
+    <h2> Burgers to EAT! get working skinny</h2>
 
- <ul>
-  {{#each burger}}
-    {{#if devoured}}
-      <li>
-        {{name}}
-        <button class="delete-burger" data-id="{{id}}" data-newdevoured="{{devoured}}" >Throw up</button>
-      </li>
-    {{/if}}
-  {{/each}}
- </ul>
+    <ul>
+      {{#each burger}}
+        {{#unless devoured}}
+          <li>
+            {{name}}
+            <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}" >Eat da Burgar</button>
+          </li>
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
 
- <h2>MAke your own burger, bc you are special or something...</h2>
+  <div class="col-1">
+    {{!-- separator --}}
+  </div>
 
+  <div class="col-4">
+    <h2>Burgers EATEN, you fatty</h2>
+
+    <ul>
+      {{#each burger}}
+        {{#if devoured}}
+          <li>
+            {{name}}
+            <button class="delete-burger" data-id="{{id}}" data-newdevoured="{{devoured}}" >Throw up</button>
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="col-1">
+    {{!-- separator --}}
+  </div>
+
+</div>
+
+ <h2>Make your own burger, bc you are special or something...</h2>
 
  <form class="create-burger">
 
@@ -39,4 +60,5 @@
   
     <button type="button">CONJURE THE BURGER</button>
     </div>
+
  </form>
